@@ -1,0 +1,19 @@
+formulas(assumptions).
+
+    % If Alba is not late, the optician is happy.
+    -AlbaLate -> OpticianHappy.
+
+    % Alba is early.
+    AlbaEarly.
+
+    % Being early means Alba is not late.
+    AlbaEarly -> -AlbaLate.
+
+end_of_list.
+
+formulas(goals).
+
+    % Prove that the optician is happy.
+    OpticianHappy.
+
+end_of_list.

@@ -1,0 +1,19 @@
+formulas(assumptions).
+
+    % The picture is valuable or it is a fake.
+    PictureIsValuable | PictureIsFake.
+
+    % If the picture is valuable, it is by Rembrandt.
+    PictureIsValuable -> PictureByRembrandt.
+
+    % If the picture is fake, there will be a police investigation.
+    PictureIsFake -> PoliceInvestigation.
+
+end_of_list.
+
+formulas(goals).
+
+    % Prove that it is by Rembrandt or there will be an investigation.
+    PictureByRembrandt | PoliceInvestigation.
+
+end_of_list.

@@ -1,0 +1,22 @@
+formulas(assumptions).
+
+    % If Alan did not lock the door, he forgot or lost the key.
+    -AlanLockedDoor -> (AlanForgotKey | AlanLostKey).
+
+    % If Alan lost the key, he will be in trouble.
+    AlanLostKey -> AlanInTrouble.
+
+    % If Alan has a good memory, he did not forget.
+    AlanGoodMemory -> -AlanForgotKey.
+
+    % Alan has a good memory.
+    AlanGoodMemory.
+
+end_of_list.
+
+formulas(goals).
+
+    % Prove that Alan locked the door or is in trouble.
+    AlanLockedDoor | AlanInTrouble.
+
+end_of_list.

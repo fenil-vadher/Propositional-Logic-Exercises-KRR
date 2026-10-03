@@ -1,0 +1,22 @@
+formulas(assumptions).
+
+    % Diamond was stolen.
+    DiamondStolen.
+
+    % A stolen diamond means a thief got in.
+    DiamondStolen -> ThiefInHouse.
+
+    % The thief came through the door or window.
+    ThiefInHouse -> (DoorOpen | WindowSmashed).
+
+    % The window was not smashed.
+    -WindowSmashed.
+
+end_of_list.
+
+formulas(goals).
+
+    % Prove that the door was open.
+    DoorOpen.
+
+end_of_list.

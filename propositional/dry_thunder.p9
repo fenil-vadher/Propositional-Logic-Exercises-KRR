@@ -1,0 +1,19 @@
+formulas(assumptions).
+
+    % A dry thunderstorm means lightning without rain.
+    DryThunder -> (Lightning & -Raining).
+
+    % There is a dry thunderstorm.
+    DryThunder.
+
+    % If there is lightning, it is raining or hot.
+    Lightning -> (Raining | Hot).
+
+end_of_list.
+
+formulas(goals).
+
+    % Prove that it is hot.
+    Hot.
+
+end_of_list.

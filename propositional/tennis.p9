@@ -1,0 +1,21 @@
+formulas(assumptions).
+
+    % If I am not playing, I am watching.
+    -Playing -> Watching.
+
+    % If I am not watching, I am reading.
+    -Watching -> Reading.
+
+    % I cannot do two tennis activities at the same time.
+    -(Playing & Watching).
+    -(Playing & Reading).
+    -(Watching & Reading).
+
+end_of_list.
+
+formulas(goals).
+
+    % I am watching tennis.
+    Watching.
+
+end_of_list.

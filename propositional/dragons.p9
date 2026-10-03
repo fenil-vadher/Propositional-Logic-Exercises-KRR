@@ -1,0 +1,22 @@
+formulas(assumptions).
+
+    % If the dragon destroys the village, taking the castle avoids homelessness.
+    DragonDestroysVillage -> (VillagersTakeCastle -> -VillagersHomeless).
+
+    % If the King is mean, the villagers take the castle.
+    KingMean -> VillagersTakeCastle.
+
+    % If the King is not mean, the dragon does not destroy the village.
+    -KingMean -> -DragonDestroysVillage.
+
+    % The dragon destroys the village.
+    DragonDestroysVillage.
+
+end_of_list.
+
+formulas(goals).
+
+    % Prove that the villagers are not homeless.
+    -VillagersHomeless.
+
+end_of_list.

@@ -1,0 +1,27 @@
+formulas(assumptions).
+
+    % If he learns philosophy, he gains wisdom.
+    % If he learns science, he advances knowledge.
+    (TarquinLearnsPhilosophy -> TarquinAcquiresWisdom) &
+    (TarquinLearnsScience -> TarquinAdvancesKnowledge).
+
+    % Wisdom means he will not die in misery.
+    TarquinAcquiresWisdom -> -TarquinDiesMisery.
+
+    % Advancing knowledge means his aspirations are satisfied.
+    TarquinAdvancesKnowledge -> TarquinSatisfiesAspirations.
+
+    % If his aspirations are not satisfied, he dies in misery.
+    -TarquinSatisfiesAspirations -> TarquinDiesMisery.
+
+    % His aspirations are not satisfied.
+    -TarquinSatisfiesAspirations.
+
+end_of_list.
+
+formulas(goals).
+
+    % He learns neither philosophy nor science.
+    (-TarquinLearnsPhilosophy & -TarquinLearnsScience).
+
+end_of_list.
