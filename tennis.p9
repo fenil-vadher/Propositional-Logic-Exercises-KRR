@@ -66,9 +66,7 @@ formulas(assumptions).
 
 %% A3: "I cannot do more than one tennis-related activity at the same time. *"
 
-        -(Playing & Watching).
-        -(Playing & Reading).
-        -(Watching & Reading).
+        (-(Playing & Watching) & -(Playing & Reading) & -(Watching & Reading)).
 
 
 end_of_list.
