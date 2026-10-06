@@ -60,7 +60,7 @@ formulas(assumptions).
 
 %% A2: "Saturday and Sunday is the weekend."
 
-        Weekend -> (Saturday | Sunday).
+        Weekend <-> (Saturday | Sunday).
 
 %% A3: "On holidays the University is closed."
 
